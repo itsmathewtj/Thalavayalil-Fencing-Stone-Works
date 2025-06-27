@@ -949,4 +949,76 @@
 }
 /*** copyright end ***/
 
+.contact-float {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 9999;
+}
+
+.float-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: floatPulse 2s infinite, glow 3s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.float-icon:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+}
+
+.float-icon.whatsapp {
+  background: linear-gradient(145deg, #25D366, #128C7E);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+}
+
+.float-icon.call {
+  background: linear-gradient(145deg, #FF4D4D, #D60000);
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.6);
+}
+
+@keyframes floatPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .float-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+
 
