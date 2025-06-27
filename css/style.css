@@ -1020,5 +1020,11 @@
   }
 }
 
+.float-icon.email {
+  background: linear-gradient(145deg, #4D79FF, #0033cc);
+  box-shadow: 0 0 15px rgba(77, 121, 255, 0.6);
+}
+
+
 
 
