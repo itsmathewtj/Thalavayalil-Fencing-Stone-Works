@@ -97,7 +97,3 @@
 
 })(jQuery);
 
-function togglePhoneList() {
-    const list = document.getElementById('phoneList');
-    list.style.display = (list.style.display === 'flex') ? 'none' : 'flex';
-}
